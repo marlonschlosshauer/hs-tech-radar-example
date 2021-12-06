@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+    <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="src/css/styles.css">
+	<style>
+	 /* TODO: Fix Tech Radar font bug  */
+	 * { font-size: 0.85rem;}
+	</style>
+    </head>
+    <body>
+	<svg id="radar"></svg>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="http://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
+	<script>
+	 radar_visualization({
+	     svg_id: "radar",
+	     width: 1450,
+	     height: 1000,
+	     colors: {
+		 background: "#fff",
+		 grid: "#bbb",
+		 inactive: "#ddd"
+	     },
+	     title: "Seminar Neue Technologien SS2020-WS2020/2021",
+	     quadrants: [
+		 { name: "Infrastructure" },
+		 { name: "Data Management" },
+		 { name: "Lanugages" },
+		 { name: "App Development" }
+	     ],
+	     rings: [
+		 { name: "ADOPT",  color: "#93c47d" },
+		 { name: "TRIAl", color: "#b7e1cd" },
+		 { name: "ASSES",  color: "#fce8b2" },
+		 { name: "HOLD",  color: "#f4c7c3" }
+	     ],
+	     print_layout: true,
+	     entries: [
+		 { "label": "Java Akka", "quadrant": 1, "ring": 0, "moved": -1},
+		 { "label": "Jetpack Compose", "quadrant": 3, "ring": 2, "moved": -1},
+		 { "label": "Electron", "quadrant": 3, "ring": 1, "moved": -1},
+		 { "label": "GraphQL", "quadrant": 1, "ring": 0, "moved": -1},
+		 { "label": "Kotlin/JS React", "quadrant": 3, "ring": 1, "moved": -1},
+		 { "label": "IonicReact", "quadrant": 3, "ring": 2, "moved": -1},
+		 { "label": "Dart (Null Safety)", "quadrant": 2, "ring": 1, "moved": -1},
+		 { "label": "Flutter Desktop", "quadrant": 3, "ring": 2, "moved": -1},
+		 { "label": "Rancher", "quadrant": 0, "ring": 2, "moved": -1},
+		 { "label": "React Native", "quadrant": 3, "ring": 0, "moved": -1},
+		 { "label": "Bazel", "quadrant": 0, "ring": 2, "moved": -1},
+		 { "label": "Qute", "quadrant": 1, "ring": 3, "moved": -1},
+	     ],
+	 });
+	</script>
+    </body>
+</html>
+
